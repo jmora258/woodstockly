@@ -13,9 +13,9 @@ class ReviewsController < ApplicationController
 		user_review = Review.new( review_params )
 
 		if user_review.save 
-			@system_messsage = "Review successfully saved!"
+			@system_message = "Review successfully saved!"
 		else
-			@system_messsage = user_review.errors.full_messages
+			@system_message = user_review.errors.full_messages
 		end 
 	end 
 

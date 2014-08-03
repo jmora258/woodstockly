@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   # create review and display results via POST
   post '/create' => 'reviews#create'
 
-
-
 end
