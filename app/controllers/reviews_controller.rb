@@ -5,11 +5,27 @@ class ReviewsController < ApplicationController
 	end 
 
 	def new
-		# @review = Review.all 
+		# this this empty
+		# redirects to form to create new review 
 	end 
 
 	def create 
-		# @review = Review.all 
+		user_review = Review.new( review_params )
+
+		if user_review.save 
+			@system_messsage = "Review successfully saved!"
+		else
+			@system_messsage = user_review.errors.full_messages
+		end 
+	end 
+
+
+	private 
+
+	def review_params 
+		# returns a string 
+		params.permit(:name, :title, :description, :star_count)
+
 	end 
 
 end 
