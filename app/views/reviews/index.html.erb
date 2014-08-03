@@ -1,3 +1,12 @@
-<h4>All reviews shown below: </h4><br /> 
+<h4>All reviews for Red Lobster Restaurant shown below: </h4><br /> 
 
+<%  @review.each do |r| %> 
+	
+	Review by <%= r.name %><br /> 
+	<ul>
+		<li>Title: <%= r.title %></li>
+		<li>Description: <%= r.description %></li>
+		<li>Stars: <%= r.star_count %></li>
+	</ul> 
 
+<% end %> 
